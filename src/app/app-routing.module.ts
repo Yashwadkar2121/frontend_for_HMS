@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { AppComponent } from './app.component';
+import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,12 @@ const routes: Routes = [
     component: AdmindashComponent,
   },
   {
-    path: 'appoinment',
+    path: 'appointment',
     component: AppoinmentComponent,
+  },
+  {
+    path: 'create-appointment',
+    component: CreateAppointmentComponent,
   },
 ];
 

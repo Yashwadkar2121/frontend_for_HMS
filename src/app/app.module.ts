@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
+import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdmindashComponent,
-    AppoinmentComponent
+    AppoinmentComponent,
+    CreateAppointmentComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

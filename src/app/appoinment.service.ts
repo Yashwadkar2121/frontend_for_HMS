@@ -7,11 +7,20 @@ import { Appoinment } from './appoinment';
   providedIn: 'root',
 })
 export class AppoinmentService {
-  constructor(private httpCient: HttpClient) {}
-
   private baseUrl = 'http://localhost:8081/api/v2';
 
+  constructor(private httpClient: HttpClient) {}
+
+  // Get all appointments
   getAppoinmentList(): Observable<Appoinment[]> {
-    return this.httpCient.get<Appoinment[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Appoinment[]>(this.baseUrl);
+  }
+
+  // Create a new appointment
+  createAppointment(appointment: Appoinment): Observable<Appoinment> {
+    return this.httpClient.post<Appoinment>(
+      `${this.baseUrl}/insert`,
+      appointment
+    );
   }
 }
