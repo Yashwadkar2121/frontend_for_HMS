@@ -23,4 +23,9 @@ export class AppoinmentService {
       appointment
     );
   }
+
+  // Delete a appointment
+  deleteAppointment(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.baseUrl}/${id}`);
+  }
 }

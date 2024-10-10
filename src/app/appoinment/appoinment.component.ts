@@ -19,4 +19,11 @@ export class AppoinmentComponent {
       this.appointments = data;
     });
   }
+
+  delete(id: number) {
+    this.appoinmentService.deleteAppointment(id).subscribe((data) => {
+      console.log(data);
+      this.getApponiments();
+    });
+  }
 }
