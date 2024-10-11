@@ -18,4 +18,11 @@ export class AdmindashComponent {
       this.patients = data;
     });
   }
+
+  delete(id: number) {
+    this.patientService.delete(id).subscribe((data) => {
+      console.log(data);
+      this.getPatients();
+    });
+  }
 }

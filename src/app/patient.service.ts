@@ -7,11 +7,14 @@ import { Patient } from './patient';
   providedIn: 'root',
 })
 export class PatientService {
-  constructor(private httpCient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   private baseUrl = 'http://localhost:8081/api/v1';
 
   getPatientList(): Observable<Patient[]> {
-    return this.httpCient.get<Patient[]>(`${this.baseUrl}`);
+    return this.httpClient.get<Patient[]>(`${this.baseUrl}`);
+  }
+  delete(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.baseUrl}/${id}`);
   }
 }
