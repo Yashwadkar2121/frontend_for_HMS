@@ -4,8 +4,13 @@ import { AdmindashComponent } from './admindash/admindash.component';
 import { AppoinmentComponent } from './appoinment/appoinment.component';
 import { AppComponent } from './app.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'admin',
     component: AdmindashComponent,
